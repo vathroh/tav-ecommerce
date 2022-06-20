@@ -6,6 +6,7 @@ $("#sidebar").mCustomScrollbar({
     theme: "minimal"
 });
 
+
 $('#dismiss, .overlay').on('click', function () {
     $('#sidebar').removeClass('active');
     $('.overlay').removeClass('active');
@@ -16,6 +17,83 @@ $('#drawer').on('click', function () {
     $('.overlay').addClass('active');
     $('.collapse.in').toggleClass('in');
     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu1').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu2').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu3').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu4').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu6').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu7').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu8').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu9').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu10').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu11').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
+
+$('#menu12').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+    // $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
 });
 
 

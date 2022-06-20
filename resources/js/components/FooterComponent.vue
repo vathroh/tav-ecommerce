@@ -1,136 +1,210 @@
 <template>
     <footer class="footer">
-        <div class="container footer-inner">
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer-item clearfix">
-                        <h4>
-                            Contact Info
-                        </h4>
-                        <ul class="contact-info">
-                            <li>
-                                <i class="flaticon-pin"></i>20/F Green Road, Dhanmondi, Dhaka
-                            </li>
-                            <li>
-                                <i class="flaticon-mail"></i><a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
-                            </li>
-                            <li>
-                                <i class="flaticon-phone"></i><a href="tel:+55-417-634-7071">+0477 85X6 552</a>
-                            </li>
-                            <li>
-                                <i class="flaticon-fax"></i>+0477 85X6 552
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="social-list-2">
-                            <ul>
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="container footer-inner">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-item clearfix">
+                    <img :src="image" style="width: 155px; height: 115px;" alt="">
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                    <div class="footer-item">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-item clearfix">
+                    
+                        <div class="deskripsi">
+                            <p>TAV MOBIL merupakan platform jual beli mobil terbaik dan terlengkap di Indonesia. Tersedia berbagai merk mobil dengan garansi mesin dan transmisi serta bebas kecelakaan. Anda dapat menjual atau membeli mobil di TAV dengan Kualitas & Harga Terbaik.</p>
+                        </div> 
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
+                <div class="footer-item" >
                         <h4>
-                            Useful Links
+                            Layanan
                         </h4>
                         <ul class="links">
                             <li>
-                                <a href="#">Home</a>
+                                <router-link class="links" :to="{name: 'Jual'}">Jual Mobil</router-link>
                             </li>
                             <li>
-                                <a href="about.html">About Us</a>
+                                <router-link class="links" :to="{name: 'Beli'}">Beli Mobil</router-link>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                <div class="recent-posts footer-item">
+                    <h4>
+                            Gabung Mitra
+                        </h4>
+                        <ul class="links">
+                            <li>
+                                <router-link class="links" :to="{name: 'DaftarFranchise'}">Franchise</router-link>
                             </li>
                             <li>
-                                <a href="services.html">Services</a>
+                                <router-link class="links" :to="{name: 'DaftarDealer'}">Dealer</router-link>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        <h4>
+                            Bantuan
+                        </h4>
+                        <ul class="contact-info">                          
+                            <li>
+                                <i class="flaticon-phone"></i><a href="tel:024-1211-121">024-1211121</a>
+                            </li>
+                             <li>
+                                <i class="fa fa-whatsapp"></i><a href="https://wa.me/6289668303824">089668303824</a>
                             </li>
                             <li>
-                                <a href="faq.html">Faq</a>
+                                <router-link class="links" :to="{name: 'Faq'}">FAQ</router-link>
                             </li>
                             <li>
-                                <a href="contact.html">Contact Us</a>
+                                <router-link class="links" :to="{name: 'Hubungi'}">Hubungi Kami</router-link>
+                            </li>
+                        </ul>
+                        <div class="social-list-2">
+                            <ul>
+                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    
+            </div>
+        </div>
+    </div>
+    <div class="copy sub-footer">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Bahasa
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <p>Copyright © 2022 || <a href="#"> PT. TAV Mobil </a>|| All Rights Reserved</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <a href="#" style="font-size: 12px;">
+                            Syarat Penggunaan & Kebijakan Privacy
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</footer>
+    <!-- <footer class="footer">
+        <div class="container footer-inner">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="footer-item">
+                        <img :src="image" alt="">
+                        <div class="deskripsi">
+                            <p>TAV MOBIL merupakan platform jual beli mobil terbaik dan terlengkap di Indonesia.Tersedia berbagai merk mobil dengan garansi mesin dan transmisi serta bebas kecelakaan. Anda dapat menjual atau membeli mobil di Tav dengan Kualitas & Harga Terbaik.</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer-item">
+                        <h4>
+                            Layanan
+                        </h4>
+                        <ul class="links">
+                            <li>
+                                <router-link class="links" :to="{name: 'Jual'}">Jual Mobil</router-link>
                             </li>
                             <li>
-                                <a href="car-comparison.html">Car Compare</a>
-                            </li>
-                            <li>
-                                <a href="car-reviews.html">Car Reviews</a>
-                            </li>
-                            <li>
-                                <a href="elements.html">Elements</a>
+                                <router-link class="links" :to="{name: 'Jual'}">Beli Mobil</router-link>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                    <div class="recent-posts footer-item">
-                        <h4>Recent Posts</h4>
-                        <div class="d-flex mb-4 recent-posts-box">
-                            <a href="car-details.html">
-                                <img class="flex-shrink-0 me-3" src="img/car/small-car-3.png" alt="small-car">
-                            </a>
-                            <div class="detail align-self-center">
-                                <h5>
-                                    <a href="car-details.html">Bentley Continental GT</a>
-                                </h5>
-                                <div class="listing-post-meta">
-                                    $345,00 | <a href="#"><i class="fa fa-calendar"></i> Jan 12, 2021</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-4 recent-posts-box">
-                            <a href="car-details.html">
-                                <img class="flex-shrink-0 me-3" src="img/car/small-car-1.png" alt="small-car">
-                            </a>
-                            <div class="detail align-self-center">
-                                <h5>
-                                    <a href="car-details.html">Fiat Punto Red</a>
-                                </h5>
-                                <div class="listing-post-meta">
-                                    $345,00 | <a href="#"><i class="fa fa-calendar"></i> Aug 24, 2021</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex recent-posts-box">
-                            <a href="car-details.html">
-                                <img class="flex-shrink-0 me-3" src="img/car/small-car-2.png" alt="small-car">
-                            </a>
-                            <div class="detail align-self-center">
-                                <h5>
-                                    <a href="car-details.html">Nissan Micra Gen5</a>
-                                </h5>
-                                <div class="listing-post-meta">
-                                    $345,00 | <a href="#"><i class="fa fa-calendar"></i> Sep 24, 2021</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer-item">
+                        <h4>
+                            Gabung Mitra
+                        </h4>
+                        <ul class="links">
+                            <li>
+                                <a class="links" href="/">Franchise</a>
+                            </li>
+                            <li>
+                                <router-link class="links" :to="{name: 'Jual'}">Dealer</router-link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer-item clearfix">
-                        <h4>Subscribe</h4>
-                        <div class="Subscribe-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                            <form class="form-inline d-flex" action="#">
-                                <input class="form-control" type="email" id="email" placeholder="Email Address...">
-                                <button class="btn button-theme" type="submit"><i class="fa fa-paper-plane"></i></button>
-                            </form>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer-item">
+                        <h4>
+                            Bantuan
+                        </h4>
+                        <ul class="contact-info">                          
+                            <li>
+                                <i class="flaticon-phone"></i><a href="tel:024-1211-121">024-1211121</a>
+                            </li>
+                             <li>
+                                <i class="fa fa-whatsapp"></i><a href="https://wa.me/08966803824">089668303824</a>
+                            </li>
+                            <li>
+                                <a class="links" href="/">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="links" href="/">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                        <div class="social-list-2">
+                            <ul>
+                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                            </ul>
                         </div>
+                    
                     </div>
                 </div>
             </div>
         </div>
         <div class="copy sub-footer">
-            <div class="container">
+            
                 <div class="row">
-                    <div class="col-lg-12">
-                        <p>© 2021 <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Bahasa
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <p align="center">Copyright © 2022 || <a href="#"> PT. TAV Mobil </a>|| All Rights Reserved</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <p>
+                            Syarat Penggunaan & Kebijakan Privacy
+                        </p>
                     </div>
                 </div>
-            </div>
+            
         </div>
-    </footer>
+    </footer> -->
 </template>
+<script>
+import image from "../../../public/style/img/tav_logo_putih.png"
+    
+    export default {
+        data() {
+            return {
+                image: image
+            }
+        }
+    }
+</script>

@@ -1,11 +1,10 @@
 <template>
     <div>
-        <header-component></header-component>
         <banner-component></banner-component>
         <searchbox-component></searchbox-component>
-        <featurecar-component></featurecar-component>
-        <adventages-component></adventages-component>
-    </div>
+        <galeri-component></galeri-component>
+        <langkah-component></langkah-component>
+        <faq-component></faq-component>
         
-    
+    </div>    
 </template>

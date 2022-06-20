@@ -34,17 +34,19 @@ Version:    1.1.0
 
 html, body {
     height: 100%;
+    width: 100%;
     /* font-family: 'Open Sans', sans-serif; */
 }
 
 a {
     cursor: pointer;
-    color: #2a2a2a;
+    color: #4f8fda;
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
-    color: #444343;
+    color: #051367;
     text-decoration: none;
 }
 
@@ -54,6 +56,9 @@ p {
     color: #535353;
 }
 
+.navbar-brand .logos img{
+    color: #4f8fda;
+}
 strong {
     color: #535353;
 }
@@ -62,11 +67,15 @@ span {
     color: #535353;
 }
 
+
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #161616;
 }
-
+.h5:hover {
+    color: #1700EB;
+}
 ul {
     margin: 0;
     padding: 0;
@@ -74,13 +83,33 @@ ul {
     color: #535353;
 }
 
+.btns-like{
+    float: right;
+    display: flex;
+}
+
+.btn-like {
+    background: transparent;
+    border: none;
+    /* float: right; */
+    font-size: 14px;
+    outline: none;
+    color: grey;
+    position: relative;
+    /* left: 10px; */
+    z-index: 20;
+}
+
+.btn-like i:hover{
+    cursor: pointer;
+}
 .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: none;
 }
 
 .btn{
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /** Social media color **/
@@ -106,7 +135,7 @@ ul {
 
 /** Social media bg**/
 .facebook-bg {
-    background: #4867aa;
+    background: #035397;
     color: #fff;
 }
 
@@ -116,7 +145,7 @@ ul {
 }
 
 .google-bg {
-    background: #db4437;
+    background: #bd081c;
     color: #fff;
 }
 
@@ -290,7 +319,7 @@ button:focus {
 
 .btn-md {
     cursor: pointer;
-    padding: 16px 30px 11px 30px;
+    padding: 20px;
     letter-spacing: 1px;
     font-size: 14px;
     font-weight: 600;
@@ -315,12 +344,13 @@ button:focus {
 
 .btn-theme {
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .btn-theme:hover {
-    color: #FFF;
+    color: #fff;
 }
+
 
 .btn-white-lg-outline {
     color: #FFF;
@@ -336,7 +366,7 @@ button:focus {
     text-transform: uppercase;
     border-radius: 3px;
     letter-spacing: 1px;
-    font-family: 'Raleway', sans-serif!important;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
 .btn-white-lg-outline:hover {
@@ -358,7 +388,7 @@ button:focus {
 }
 
 .login-1 .btn-md{
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /** BTN 5 **/
@@ -375,7 +405,7 @@ button:focus {
     text-transform: uppercase;
     border-radius: 3px;
     letter-spacing: 1px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .btn-5:hover{
@@ -428,7 +458,7 @@ button:focus {
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 3px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .btn-6:before {
@@ -473,6 +503,8 @@ button:focus {
     opacity: 1;
     visibility: visible;
 }
+
+
 
 /** BTN RADIUS 50 **/
 .btn-radius-50{
@@ -780,6 +812,7 @@ input[type=checkbox]:checked + label:before {
 
 
 
+
 /** Megamenu **/
 .megamenu-li {
     position: static;
@@ -826,7 +859,9 @@ input[type=checkbox]:checked + label:before {
 /** Banner**/
 #banner {
     position: relative;
-    z-index: 999;
+    z-index: 10;
+    top: 4rem;
+
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -834,6 +869,18 @@ input[type=checkbox]:checked + label:before {
     top: 0;
     bottom: 0;
     width: 0;
+}
+
+.carousel-indicators {
+    position: static;
+}
+
+
+.carousel-indicators button[data-bs-target]{
+    width: 500px;
+}
+.carousel-indicators button[data-bs-target]:not(.active){
+    opacity: 0.5;
 }
 
 .banner-bg {
@@ -853,10 +900,21 @@ input[type=checkbox]:checked + label:before {
     letter-spacing: 1px;
     right: 0;
     left: 0;
-    z-index: 999;
+    z-index: -1;
     align-self: center;
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%);
+}
+.banner-2 .carousel-content.banner-info {
+    margin: 0 auto;
+    letter-spacing: 1px;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    align-self: center;
+    position: relative;
+    top: 20%;
     transform: translateY(-50%);
 }
 
@@ -874,6 +932,19 @@ input[type=checkbox]:checked + label:before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-2 .carousel-content.banner-info-2 {
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    align-self: center;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
     z-index: 1;
     width: 100%;
     text-align: center;
@@ -881,6 +952,9 @@ input[type=checkbox]:checked + label:before {
 
 .banner .carousel-content.bi-2{
     padding-top: 100px;
+}
+.banner-2 .carousel-content.bi-2{
+    padding-top: 50px;
 }
 
 .carousel-item .text-right {
@@ -890,6 +964,8 @@ input[type=checkbox]:checked + label:before {
 .banner .banner-slider-inner{
     padding: 0;
     margin: 0;
+    width: 100%;
+    height: 520px;
 }
 
 .banner .banner-slider-inner h1 {
@@ -899,11 +975,32 @@ input[type=checkbox]:checked + label:before {
     font-weight: 700;
     letter-spacing: normal;
     text-transform: uppercase;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.banner-2 .banner-slider-inner h1 {
+    color: #5D8BF4;
+    margin-bottom: 15px;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
 .banner .banner-slider-inner h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+.banner-2 .banner-slider-inner h2 {
     color: #fff;
     margin-bottom: 15px;
     font-size: 50px;
@@ -915,7 +1012,7 @@ input[type=checkbox]:checked + label:before {
     font-weight: 300;
     margin-bottom: 0;
     font-size: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .banner .banner-slider-inner .max-w {
@@ -931,6 +1028,15 @@ input[type=checkbox]:checked + label:before {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.banner-2 .banner-slider-inner p {
+    color: #000;
+    line-height: 1.6;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    
+}
 .banner .banner-slider-inner h2 span {
     font-weight: 900;
 }
@@ -944,11 +1050,20 @@ input[type=checkbox]:checked + label:before {
     right: 0%;
     left: 0%;
     width: 100%;
-    height: 100%;
+    height: 555px;
     bottom: 0;
-    background-color: rgba(36, 42, 53, 0.7);
+    background-color: #1B1B1B;
 }
 
+.banner-2 .banner-slider-inner {
+    text-shadow: none;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: #1B1B1B;
+}
 .banner-bg-color .banner-slider-inner {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -1008,19 +1123,46 @@ input[type=checkbox]:checked + label:before {
     max-width: 600px!important;
 }
 
-.banner .carousel-control-next, .carousel-control-prev {
+.banner .carousel-control-next {
     background: #423b3b57;
-    width: 40px;
-    height: 60px;
-    border-radius: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
     top: 50%;
-    margin: 0;
+    margin-left: 10px;
+}
+
+.banner .carousel-control-prev {
+    background: #423b3b57;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    top: 50%;
+    margin-left: 10px;
+}
+
+.carousel-control-prev {
+    background: #423b3b57;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    top: 50%;
+    margin-left: 10px;
+}
+
+.carousel-control-next {
+    background: #423b3b57;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    top: 50%;
+    margin-right: 10px;
 }
 
 .banner .carousel-control-next-icon, .carousel-control-prev-icon {
     display: inline-block;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1rem;
+    height: 1rem;
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100% 100%;
@@ -1056,7 +1198,7 @@ input[type=checkbox]:checked + label:before {
     margin-bottom: 0;
     font-size: 16px;
     font-weight: 300;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -1134,12 +1276,12 @@ input[type=checkbox]:checked + label:before {
     padding: 12px 40px 10px;
     position: relative;
     z-index: 5;
-    border-radius: 50px;
+    border-radius: 20px;
     transition: .7s ease;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Raleway', sans-serif!important;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
 /** Search start **/
@@ -1186,19 +1328,40 @@ input[type=checkbox]:checked + label:before {
     padding: 30px 0 0;
 }
 
+.herowave {
+    z-index: 0;
+    top: -15%;
+    right: 0;
+    width: 75%;
+    text-align: right;
+}
+.w-100 {
+    width: 100%!important;
+}
+
 .bg-grea{
-    background: #e6e6e6;
+    background: rgb(226 232 240);
 }
 
 .bg-grea-2{
-    background: #fff;
+    background: #51769E;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 90px;
+    border-top-left-radius: 90px;
 }
 
 .bg-grea-3{
-    background: #f9f9f8;
+    background: #DFF6FF;
 }
 
+.bg-grea-4{
+    position: absolute;
+    width: 100%;
+    height: 680px;
+    bottom: 0;
+    left: 0;
+    background: url(../img/banner/wave-d.png);
+}
 .search-area-inner {
     margin: 0 auto;
 }
@@ -1284,9 +1447,46 @@ input[type=checkbox]:checked + label:before {
     background: #fff;
 }
 
+/* .form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+} */
+
 .form-control {
-    padding-left: 15px;
+    padding: 12px;
 }
+.form-select {
+    padding: 12px;
+}
+
+form .form-group{width:100%;}
+form .form-group{position:relative;}
+
+form input{
+    border:1px solid #eee;
+    border-radius:2px;
+    color:#777;
+    outline:none;
+    margin-top:0;
+    margin-bottom:0;
+    font-size:inherit;
+    display:block;
+    padding:12px;
+    width:100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  
+}
+form input+button{
+    position:absolute;
+    right: 0px;
+    top: 0px;
+}
+
+   
+
 
 .search-fields button {
     border-radius: 1px;
@@ -1294,6 +1494,14 @@ input[type=checkbox]:checked + label:before {
     border: none;
     background: #fff !important;
 }
+
+/* Transisi */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+.fade-enter, .fade-leave-to /* .fade-leave-active di bawah versi 2.1.8 */ {
+    opacity: 0;
+  }
 
 .search-button {
     cursor: pointer;
@@ -1327,7 +1535,7 @@ input[type=checkbox]:checked + label:before {
 .filteriz-navigation li{
     font-size: 15px;
     font-weight: 500;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: transparent;
 }
 
@@ -1584,7 +1792,7 @@ input[type=checkbox]:checked + label:before {
 
 .bootstrap-select .dropdown-menu li a span{
     font-weight: 400!important;
-    color: #636363!important;
+    color: #000000!important;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -1632,7 +1840,7 @@ input[type=checkbox]:checked + label:before {
 .btn-default.active,
 .btn-default:active,
 .open > .dropdown-toggle.btn-default {
-    color: #333;
+    color: rgb(17, 17, 17);
     background-color: transparent !important;
     box-shadow: none !important;
     border-color: #adadad;
@@ -1690,12 +1898,12 @@ input[type=checkbox]:checked + label:before {
 }
 
 .bootstrap-select .dropdown-menu li a.active:hover .text {
-    color: #515151;
+    color: #000000;
 }
 
 .bootstrap-select .dropdown-toggle::after {
     top: 25px;
-    position: absolute;
+    position: relative;
     right: 12px;
 }
 
@@ -1705,25 +1913,87 @@ input[type=checkbox]:checked + label:before {
 
 /** Main title start **/
 .main-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 .main-title h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.main-title h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: none;
+    color: #000000;
+}
+
+.main-title h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: none;
+    color: #000000;
+}
+
+.main-title-4 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-title-4 h1 {
     font-size: 30px;
     font-weight: 700;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.main-title-4 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.main-title-3 h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: rgb(75, 75, 75);
+    float: left;
+}
+
+
+@media only screen and (min-width: 1024px){
+    #manage-scroll {
+        min-height: 540px;
+    }
+}
+
+#manage-scroll {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 2em;
 }
 
 .main-title h2 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #000000;
 }
 
 .main-title p{
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 0;
     font-weight: 400;
 }
@@ -1732,51 +2002,102 @@ input[type=checkbox]:checked + label:before {
     margin-bottom: 10px;
 }
 
+.main-title img{
+    align-self: center;
+    margin:20px 8px 4px 0;
+    
+}
+
+
 /** Main title 2 start **/
 .main-title-2 {
-    margin-bottom: 50px;
+    margin-bottom: 1rem;
     z-index: 999;
-    color: #fff;
+    text-align: left;
 }
 
 .main-title-2 h1 {
-    color: #fff;
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    z-index: 20;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.main-title-2 h5 {
+    text-transform: capitalize;
+    color: #ffffff;
+    position: relative;
+    text-align: left;
+    font-size: 18px;
+}
+
+.main-title-2 h4 {
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    position: relative;
+    float: left;
+    margin:3px 8px 4px 0;
+    font-size: 20px;
+}
+
+.main-title-2 img{
+    float: left;
+    margin:0 8px 4px 0;
+    
 }
 
 .main-title-2 p{
-    color: #fff;
-    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
     margin-bottom: 0;
-    opacity: 0.9;
 }
 
 
 .main-title-3{
     text-align: left;
+
 }
 
 .main-title-3 p {
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 0;
-    color: #161616;
-    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(75, 75, 75);
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
 }
 
 .main-title-3 h1 {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 700;
-    margin-bottom: 0;
-    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-transform: capitalize;
 }
 
-.main-title-3 {
-    margin-bottom: 30px;
+.main-title-3 h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
 }
+.main-title-3 h4 {
+    font-size: 16px;
+    font-weight: 700;
+    
+    text-transform: capitalize;
+}
+
+.main-title-2 h4 {
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    position: relative;
+    float: left;
+    font-size: 14px;
+}
+
+ul.a {
+    list-style-type: circle;
+  }
+
 
 /** Title border area start **/
 .title-border{
@@ -1874,7 +2195,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .latest-offers-box:hover .car-thumbnail-photo:before {
-    background: linear-gradient(to top,rgb(240 22 32 / 70%) 0%,rgb(240 22 32 / 42%) 35%,rgb(255 255 255 / 0%) 60%,rgb(255 255 255 / 0%) 100%);
+    background: linear-gradient(to top,rgba(201, 201, 201, 0.7) 0%,rgba(199, 199, 199, 0.42) 35%,rgb(255 255 255 / 0%) 60%,rgb(255 255 255 / 0%) 100%);
     opacity: 1;
 }
 
@@ -1906,7 +2227,7 @@ input[type=checkbox]:checked + label:before {
     font-size: 15px;
     letter-spacing: 0.5px;
     margin-bottom: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .latest-offers-box h5 span {
@@ -1936,6 +2257,11 @@ input[type=checkbox]:checked + label:before {
     font-weight: 500;
     top: 20px;
     right: 20px;
+}
+
+/** Gallery **/
+.ecommerce-gallery img{
+    cursor: pointer;
 }
 
 /** Car box start **/
@@ -1971,7 +2297,7 @@ input[type=checkbox]:checked + label:before {
 
 .car-box .photo img {
     width: 100%;
-    transform: scale(1);
+    /* transform: scale(1); */
     transition: all 500ms ease;
 }
 
@@ -1980,7 +2306,7 @@ input[type=checkbox]:checked + label:before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(240 21 31 / 45%);
+    /* background: rgba(216, 216, 216, 0.45); */
     position: absolute;
     display: flex;
     justify-content: center;
@@ -2042,28 +2368,123 @@ input[type=checkbox]:checked + label:before {
 }
 
 .car-box .detail .top{
-    padding: 25px 25px 20px;
+    padding: 15px 15px 5px;
+}
+
+.car-box .detail .top1{
+    padding: 15px 15px 40px;
 }
 
 .car-box .detail .top h1{
-    font-size: 22px;
-    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 620;
+    margin-bottom: 0px;
+}
+
+.car-box .detail .top h2{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    color: #f0151f;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.car-box .detail .top1 h1{
+    font-size: 16px;
+    font-weight: 620;
+    margin-bottom: 0px;
+}
+
+.car-box .detail .top1 h2{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    color: #f0151f;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.car-detail .car-brand h1{
+    font-size: 24px;
+    float: left;
+    font-weight: 750;
+    color: #161616;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.car-detail .car-price h1{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    color: #f0151f;
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+.car-detail .car-price h2{
+    font-size: 16px;
     font-weight: 600;
+    color: #777;
+    margin-top: 15px;
+}
+
+.car-box .detail .top h3{
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+    float: left;
+    margin-top: 12px;
+}
+
+.car-box .detail .top h4{
+    font-size: 14px;
+    float: left;
+    font-weight: 500;
+    color: #161616;
+    margin-bottom: 0px;  
 }
 
 .car-box .detail .top p{
-    margin-bottom: 0;
+    font-size: 12px;
 }
 
 .car-box .detail .top h1 span{
-    float: right;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 800;
+    color: #bd081c;
 }
 
+.car-box .detail .top h2 span{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    margin-top: 10px;
+    color: #f0151f;
+}
+
+.car-box .detail .top h3 span{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 600;
+    margin-top: 10px;
+    color: #777;
+}
+
+
 .car-box .footer {
-    border-top: solid 1px #f1f1f1;
+    border-top: solid 1px #dddddd;
+    padding: 10px;
+    padding-left: 23px;
+    background: #fff!important;
+}
+
+.car-box .footer1 {
+    border-top: solid 1px #dddddd;
     padding: 15px 10px;
+    padding-left: 26px;
     background: #fff!important;
 }
 
@@ -2071,12 +2492,59 @@ input[type=checkbox]:checked + label:before {
     background: transparent;
 }
 
+.car-box .footer1:before{
+    background: transparent;
+}
+
+.car-box .detail .top1 h3{
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+    float: left;
+    margin-top: 12px;
+}
+
+.car-box .detail .top1 h4{
+    font-size: 14px;
+    float: left;
+    font-weight: 500;
+    color: #161616;
+    margin-bottom: 0px;  
+}
+
+.car-box .detail .top1 p{
+    font-size: 12px;
+}
+
+.car-box .detail .top1 h1 span{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 800;
+    color: #bd081c;
+}
+
+.car-box .detail .top1 h2 span{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    margin-top: 10px;
+    color: #f0151f;
+}
+
+.car-box .detail .top1 h3 span{
+    float: left;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 600;
+    margin-top: 10px;
+    color: #777;
+}
 .car-box .facilities-list li {
     list-style: none;
     float: left;
-    width: 33.33%;
+    /* width: 22%; */
+    margin: 5px;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -2113,7 +2581,7 @@ input[type=checkbox]:checked + label:before {
 .carbox-overlap-wrapper h2 {
     font-size: 16px;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 18px;
     text-transform: uppercase;
     margin: 0;
@@ -2123,7 +2591,7 @@ input[type=checkbox]:checked + label:before {
 .carbox-overlap-wrapper h4 {
     font-size: 16px;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 26px;
     color: #fff;
 }
@@ -2474,7 +2942,7 @@ input[type=checkbox]:checked + label:before {
     z-index: 20;
     font-weight: 600;
     opacity: 0.9;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .price-box-2 {
@@ -2506,20 +2974,70 @@ input[type=checkbox]:checked + label:before {
     margin-bottom: 0;
 }
 
+.sertif{
+    float: right;
+    width: 100px;
+    height: 20px;
+    background-color: #4f8fda;
+    font-size: 12px;
+    border-radius: 100px;
+    color: #ffff;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.sertif2{
+    float: right;
+    width: 100px;
+    height: 20px;
+    background-color: #ff1515;
+    font-size: 12px;
+    border-radius: 100px;
+    color: #ffff;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.sertiff{
+    float: left;
+    width: 100px;
+    height: 20px;
+    background-color: #4f8fda;
+    font-size: 12px;
+    border-radius: 100px;
+    color: #ffff;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.sertiff2{
+    float: left;
+    width: 100px;
+    height: 20px;
+    background-color: #ff1515;
+    font-size: 12px;
+    border-radius: 100px;
+    color: #ffff;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 /** Tag start**/
 .tag {
     position: absolute;
-    top: 15px;
+    float: right;
+    top: 16px;
     left: 15px;
     z-index: 20;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 12px;
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
     padding: 7px 14px 5px;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 3px 3px 3px 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .tag::after {
@@ -2656,7 +3174,7 @@ input[type=checkbox]:checked + label:before {
 
 .car-box-2 .detail .location {
     margin-bottom: 15px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .car-box-2 .detail .location a {
@@ -2667,7 +3185,7 @@ input[type=checkbox]:checked + label:before {
 
 .car-box-2 .price-box {
     bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     opacity: 1;
 }
 
@@ -2717,6 +3235,19 @@ input[type=checkbox]:checked + label:before {
     transition: all .15s linear;
 }
 
+/** Home page header and entrance**/
+.home-page_header {
+    height: 50%;
+    margin: 0 auto -6%;
+}
+
+.home-page_entrance {
+    position: relative;
+    z-index: 11;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 /** Car box 3 **/
 .car-box-3 {
     position: relative;
@@ -2726,6 +3257,7 @@ input[type=checkbox]:checked + label:before {
     overflow: hidden;
     -webkit-transition: all 0.5s;
     transition: all 0.9s;
+    border-radius: 5px;
 }
 
 .car-box-3:hover {
@@ -2887,7 +3419,46 @@ input[type=checkbox]:checked + label:before {
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* price range */
+.wrapper{
+    width: 300px;
+    background-color: #fff;
+    padding: 20px 25px 40px;
+}
+
+.price-input{
+    width: 100%;
+    display: flex;
+    margin: 30px 0 35px;
+}
+
+.price-input .field{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.field input{
+    width: 100%;
+    height: 100%;
+    margin-left: 12px;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.price-input .separator{
+    width: 130x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .car-box-4 h5 span {
@@ -2920,7 +3491,7 @@ input[type=checkbox]:checked + label:before {
     padding: 6px 16px 4px;
     font-weight: 600;
     border-radius: 50px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-transform: uppercase;
 }
 
@@ -3053,7 +3624,7 @@ input[type=checkbox]:checked + label:before {
     padding: 1px 20px;
     z-index: 1;
     position: relative;
-    font-family: Open Sans;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     color: #535353;
     text-transform: capitalize;
@@ -3261,7 +3832,7 @@ input[type=checkbox]:checked + label:before {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #161616;
 }
 
@@ -3320,7 +3891,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .about-text p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .about-text .main-title {
@@ -3332,17 +3903,17 @@ input[type=checkbox]:checked + label:before {
 }
 
 .about-text .main-title{
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .about-slider-box img{
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .about-slider-box{
     background: #fff;
-    padding: 10px;
-    border-radius: 10px;
+    
+    border-radius: 50%;
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 15px rgb(0 0 0 / 10%);
@@ -3372,14 +3943,16 @@ input[type=checkbox]:checked + label:before {
 /** Pricing 1 start **/
 .pricing-1 {
     margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
     position: relative;
     z-index: 9;
     background: #fff;
     -webkit-transition: .9s;
     transition: .9s;
     overflow: hidden;
-    border-radius: 9px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-1:hover {
@@ -3406,12 +3979,12 @@ input[type=checkbox]:checked + label:before {
 }
 
 .pricing-1:hover .plan-header h5, .pricing-1:hover .plan-price sup, .pricing-1:hover .plan-price, .pricing-1:hover .plan-header p, .pricing-1:hover .plan-price span, .pricing-1:hover .plan-list ul, .pricing-1:hover .plan-list ul li i {
-    color: #fff!important;
+    color: #000!important;
 }
 
-.pricing-1:hover .plan-list ul li {
+/* .pricing-1:hover .plan-list ul li {
     border-bottom: 1px dashed #ffffff63;
-}
+} */
 
 .pricing-1 .plan-header .plan-price span {
     font-size: 16px;
@@ -3425,6 +3998,47 @@ input[type=checkbox]:checked + label:before {
     position: relative;
     text-align: center;
 }
+
+.pricing-1 .plan-header-gold {
+    padding: 30px 10px 30px;
+    border-width: 1px;
+    position: relative;
+    text-align: center;
+    background: #F0A500;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    
+}
+
+.pricing-1 .plan-header-premium {
+    padding: 30px 10px 30px;
+    border-width: 1px;
+    position: relative;
+    text-align: center;
+    background: #FF0000;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    
+}
+
+.pricing-1 .plan-header-silver {
+    padding: 30px 10px 30px;
+    border-width: 1px;
+    position: relative;
+    text-align: center;
+    background: #9BA4B4;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    
+}
+
+
 
 .pricing-1 .plan-header h5 {
     margin-bottom: 5px;
@@ -3444,7 +4058,7 @@ input[type=checkbox]:checked + label:before {
     font-weight: 700;
     position: initial;
     text-align: center;
-    font-family: 'Jost', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     padding: 0;
     width: 100%;
 }
@@ -3468,8 +4082,7 @@ input[type=checkbox]:checked + label:before {
 
 .pricing-1 .plan-list ul li {
     list-style: none;
-    border-bottom: 1px dashed #eaeceb;
-    line-height: 42px;
+    line-height: 30px;
     font-size: 15px;
 }
 
@@ -3490,8 +4103,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .pricing-1:hover .pricing-btn{
-    background-color: #fff;
-    border: solid 1px #fff;
+    background-color: #141E61;
 }
 
 .pricing-1 .pricing-btn {
@@ -4541,13 +5153,16 @@ input[type=checkbox]:checked + label:before {
 
 .table-bordered .ass th{
     font-weight: 600;
+    font-size: 14px;
+    text-align: center;
 }
 
 .table-bordered {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 500;
-    color: #535353;
-    font-size: 15px;
+    color: #333333;
+    font-size: 12px;
+    padding: 10px;
 }
 
 .active-items-box .list-group-item {
@@ -4563,28 +5178,82 @@ input[type=checkbox]:checked + label:before {
     padding: 20px;
 }
 
-/** Footer start **/
-.footer {
-    padding-top: 80px;
-    background: url(../img/img-2.png);
-    z-index: 0;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.primary.l000 {
+    background-color: #5D8BF4;
+}
+.primary.l200 {
+    background-color: #FF0000;
+}
+.discount-labels-pricing-table {
+    padding-top: 9px!important;
+    padding-bottom: 8px!important;
+}
+.fw-700 {
+    font-weight: 700!important;
+}
+.pr-10 {
+    padding-right: 10px!important;
+}
+.pl-10 {
+    padding-left: 10px!important;
+}
+.border-radius-round {
+    border-radius: 100px!important;
+}
+.meteorite {
+    background-color: #FF0000!important;
+}
+.primary {
+    background-color: #FF0000!important;
 }
 
-.footer:before {
+.meteorite-2 {
+    background-color: #5D8BF4!important;
+}
+.primary-2 {
+    background-color: #5D8BF4!important;
+}
+.small {
+    font-size: 14px;
+    line-height: 16px;
+}
+.body, .subtitle {
+    font-size: 16px;
+    line-height: 16px;
+}
+.text-white {
+    color: #fff!important;
+}
+
+.mr-5 {
+    margin-right: 5px!important;
+}
+.ml-5 {
+    margin-left: 5px!important;
+}
+.white-space-no-wrap {
+    white-space: nowrap;
+}
+/** Footer start **/
+.footer {
+    padding-top: 50px;
+    background:#154c79;
+    z-index: 0;
+    position: relative;
+    width: 100%;
+}
+
+/* .footer:before {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: #201297;
+    background: #4F8FDA;
     content: "";
     z-index: -1;
     opacity: 0.3;
-}
+} */
 
 .footer ul li a{
     color: #bfbfbf;
@@ -4592,18 +5261,18 @@ input[type=checkbox]:checked + label:before {
 
 .footer h4 {
     font-size: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-weight: 600;
-    color: #e4e3e3;
-    text-transform: uppercase;
+    color: #ffff;
+    text-transform: capitalize;
 }
 
 .footer .footer-item {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .footer .footer-inner .links li {
-    margin-bottom: 10px;
+    /* margin-bottom: 5px; */
     font-size: 15px;
     font-weight: 500;
 }
@@ -4613,11 +5282,11 @@ input[type=checkbox]:checked + label:before {
 }
 
 .footer .footer-inner .links li a:hover {
-    color: #e4e3e3;
+    color: #3268ff;
 }
 
 .footer .recent-posts-box h5 a:hover{
-    color: #e4e3e3;
+    color: #3268ff;
 }
 
 .footer a{
@@ -4626,11 +5295,16 @@ input[type=checkbox]:checked + label:before {
 
 .footer .footer-inner p {
     font-size: 15px;
-    color: #bfbfbf;
+    color: #ffff;
+    text-align: justify;
+}
+
+.deskripsi {
+    margin-top: 10px;
 }
 
 .footer .footer-inner p a{
-    color: #bfbfbf;
+    color: #ffffff;
 }
 
 .footer .recent-posts .listing-post-meta {
@@ -4652,12 +5326,26 @@ input[type=checkbox]:checked + label:before {
 }
 
 .footer .footer-inner .contact-info li {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 15px;
     font-weight: 500;
     color: #bfbfbf;
     position: relative;
-    padding-left: 25px;
+    padding-left: 20px;
+}
+
+.footer .footer-inner .contact-info li .links:hover {
+    /* margin-bottom: 15px; */
+    
+    color: #3268ff;
+    
+}
+
+.footer .footer-inner .contact-info li .links.active {
+    /* margin-bottom: 15px; */
+    
+    color: #e4e3e3;
+    
 }
 
 .footer .footer-inner .contact-info li i{
@@ -4667,37 +5355,34 @@ input[type=checkbox]:checked + label:before {
 }
 
 .footer .footer-inner .social-list-2{
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .footer .footer-inner .social-list-2 li {
     display: inline-block;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 .footer .footer-inner .social-list-2 li a {
-    margin: 0 3px 3px 0;
-    font-size: 16px;
-    width: 45px;
-    height: 45px;
-    color: #fff;
-    border-radius: 0;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     text-align: center;
-    line-height: 45px;
+    color: #bfbfbf;
 }
 
 .sub-footer{
-    padding: 30px 0;
-    border-top: solid 1px #292929;
+    padding: 20px 0;
+    border-top: solid 1px rgb(112, 112, 112);
     text-align: center;
-    margin:20px 0 0;
+    margin:auto;
     color: #fff;
 }
 
 .sub-footer p{
-    color: #bfbfbf;
+    color: #757575;
     margin-bottom: 0;
+    font-size: 14px;
 }
 
 .footer .footer-inner form .form-control {
@@ -4908,7 +5593,7 @@ input[type=checkbox]:checked + label:before {
     color: #fff;
     margin: 10px 0 15px;
     font-size: 35px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .counter-box h5 {
@@ -4921,7 +5606,7 @@ input[type=checkbox]:checked + label:before {
 
 /** Advantages box start **/
 .advantages-box {
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
     width: 100%;
     background: #fff;
     padding: 30px 20px 10px;
@@ -4934,6 +5619,7 @@ input[type=checkbox]:checked + label:before {
     transition: all 0.9s;
     position: relative;
     z-index: 1;
+    border-radius: 5px;
 }
 
 .advantages-box::before {
@@ -5002,10 +5688,11 @@ input[type=checkbox]:checked + label:before {
     margin: 0 auto 30px;
     position: relative;
     background: #fff;
-    padding: 30px 25px;
+    padding: 30px 40px;
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border-radius: 10px;
 }
 
 .advantages-box-2:hover{
@@ -5044,7 +5731,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .advantages-box-2 h5 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     margin: 15px 0;
 }
@@ -5065,6 +5752,7 @@ input[type=checkbox]:checked + label:before {
     margin-bottom: 30px;
     position: relative;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .advantages-box-2:after{
@@ -5075,6 +5763,7 @@ input[type=checkbox]:checked + label:before {
     height: 100%;
     content: '';
     z-index: -1;
+    border-radius: 10px;
 }
 
 /** Advantages 3 start **/
@@ -5095,9 +5784,36 @@ input[type=checkbox]:checked + label:before {
 }
 
 .advantages-box-3{
+    margin-bottom: 20px;
+    padding: 30px;
+    /* background: #051367; */
+    border-radius: 10px;
+    border: 2px solid #051367;
+    text-align: center;
+}
+
+.advantages-box-5{
     margin-bottom: 40px;
     padding: 30px;
-    background: #fff;
+    background: #ffffff;
+    border-radius: 10px;
+    /* border: 2px solid #051367; */
+}
+
+.advantages-box-6{
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) ;
+    border-radius: 10px;
+    /* border: 2px solid #051367; */
+}
+
+.advantages-box-6 h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #ffffff;
 }
 
 .advantages-box-3 i{
@@ -5115,10 +5831,10 @@ input[type=checkbox]:checked + label:before {
     margin:10px 0 15px;
 }
 
-.advantages-box-3 p{
+/* .advantages-box-3 p{
     font-size: 15px;
     margin-bottom: 0;
-}
+} */
 
 .advantages-3 .main-title h2{
     color: #fff;
@@ -5141,10 +5857,12 @@ input[type=checkbox]:checked + label:before {
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .advantages-4 .advantages-4-inner:hover{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #000;
 }
 
 .advantages-4 .icon {
@@ -5179,7 +5897,7 @@ input[type=checkbox]:checked + label:before {
     right: -10px;
     top: -75px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #000;
     z-index: 9;
     opacity: .30;
     -webkit-transform: scale(0);
@@ -5222,12 +5940,12 @@ input[type=checkbox]:checked + label:before {
     transition-delay: 400ms;
 }
 
-.advantages-4 .advantages-4-inner:hover p, .advantages-4 .advantages-4-inner:hover h4 a{
-    color: #ffffff;
+.advantages-4 .advantages-4-inner:hover p, .advantages-4 .advantages-4-inner:hover h4 {
+    color: #000;
 }
 
 .advantages-4 .advantages-4-inner:hover .icon {
-    color: #fff;
+    color: #000;
 }
 
 /** Advantages 5 start **/
@@ -5530,7 +6248,7 @@ input[type=checkbox]:checked + label:before {
     font-weight: 600;
     margin-right: 10px;
     line-height: 35px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .sorting-options2{
@@ -5544,6 +6262,8 @@ input[type=checkbox]:checked + label:before {
 .sorting-options{
     float: right;
 }
+
+
 
 .sorting-options2 .bootstrap-select{
     width: 200px !important;
@@ -5682,7 +6402,7 @@ input[type=checkbox]:checked + label:before {
 .comment-content h6 span{
     font-weight: 500;
     font-size: 14px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .comment-content h6 span a{
@@ -5856,7 +6576,7 @@ input[type=checkbox]:checked + label:before {
     font-weight: 500;
     text-align: center;
     font-size: 15px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #fff;
 }
 
@@ -6034,7 +6754,7 @@ input[type=checkbox]:checked + label:before {
     font-size: 14px;
     font-weight: 600;
     color: #2e2e2e;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .financing-calculator .form-group {
@@ -6045,45 +6765,71 @@ input[type=checkbox]:checked + label:before {
     margin-top: 30px;
 }
 
+.fullweb{
+    width: 100%;
+}
 /** Content area srart **/
 .content-area {
-    padding: 100px 0 70px;
+    padding: 50px 0 45px;
+
 }
 
 .content-area-2 {
-    margin-bottom: 100px;
+    padding: 100px 0 70px;
+    background: url(../img/banner/car2.jpg);
+    background-size: cover;
 }
 
 .content-area-3 {
-    margin-bottom: 70px;
+    padding: 20px 0 10px;
 }
 
+.content-area-3-1 {
+    padding: 50px 0 10px;
+}
 .content-area-4 {
-    padding: 100px 0 50px;
+    padding: 100px 0 70px;
+    background: #BBE1FA;
+}
+
+.content-area-4 .wave{
+    position: relative;
+    width: 100%;
+    height: 680px;
+    bottom: 0;
+    left: 0;
+    background: url(../img/banner/wave-d.png);
 }
 
 .content-area-5 {
-    padding: 100px 0;
+    padding: 100px 0 70px;
+    
 }
 
 .content-area-6 {
-    padding: 100px 0 50px;
+    padding: 100px 0 70px;
+    background: url(../img/banner/team.jpg);
+    background-size: cover;
 }
 
 .content-area-7 {
-    padding-bottom: 85px;
+    padding: 100px 0 70px;
+    
 }
 
 .content-area-8 {
-    padding: 185px 0 70px;
+    padding: 100px 0 70px;
+    background: #2d3954;
 }
 
+
 .content-area-9 {
-    padding: 100px 0 90px;
+    padding: 100px 0 70px;
 }
 
 .content-area-10 {
-    padding: 100px 0 60px;
+    padding: 100px 0 70px;
+    background: url(../img/banner/join.jpg);
 }
 
 .content-area-11 {
@@ -6193,7 +6939,7 @@ input[type=checkbox]:checked + label:before {
     margin-bottom: 20px;
     display: block;
     line-height: 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #000000 !important;
 }
 
@@ -6363,7 +7109,7 @@ input[type=checkbox]:checked + label:before {
 .range-slider {
     margin-top: 15px;
     margin-bottom: 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .range-slider .ui-slider {
@@ -6452,7 +7198,7 @@ input[type=checkbox]:checked + label:before {
     font-size: 12px;
     color: #535353;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin-top: 15px;
 }
 
@@ -6465,7 +7211,7 @@ input[type=checkbox]:checked + label:before {
     color: #535353;
     font-weight: 600;
     margin-top: 15px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .sidebar .recent-posts-box .detail header {
@@ -6513,17 +7259,28 @@ input[type=checkbox]:checked + label:before {
 }
 
 .search-box-3{
-    padding: 30px 0 10px;
-    background: #fff;
+    padding: 5px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    top: 500px;
+    z-index: 10;
 }
 
-.search-box-3 .button-theme{
+.button-theme{
     color: #fff;
     font-weight: 600;
+    border-radius: 5px;
+}
+.search-box-3 .h5:hover{
+    color: #1700EB;
 }
 
+.search-box-3 .h1 {
+    font-size: 24px;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+}
 .search-box-3 i{
     margin-right: 3px;
 }
@@ -6656,20 +7413,20 @@ input[type=checkbox]:checked + label:before {
 
 /** Sub Banner start **/
 .sub-banner {
-    background: rgba(0, 0, 0, 0.04) url(../img/img-6.png) top left repeat;
+    background: #4f8fda;
     background-size: cover;
-    height: 500px;
+    height: 250px;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .sub-banner .breadcrumb-area {
     letter-spacing: 1px;
     position: absolute;
-    top: 60%;
+    top: 45%;
     right: 0;
     left: 0;
 }
@@ -6682,8 +7439,16 @@ input[type=checkbox]:checked + label:before {
     margin: 0 0 5px;
     font-weight: 700;
     color: #fff;
-    font-size: 30px;
-    text-transform: uppercase;
+    font-size: 28px;
+    text-transform: none;
+}
+
+.sub-banner .breadcrumb-area p {
+    margin: 0 0 5px;
+    font-weight: 600;
+    color: #56d7fe;
+    font-size: 20px;
+    text-transform: capitalize;
 }
 
 .sub-banner .breadcrumbs li {
@@ -6713,7 +7478,7 @@ input[type=checkbox]:checked + label:before {
 
 .blog-social-list {
     float: right;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .blog-social-list a {
@@ -6725,7 +7490,7 @@ input[type=checkbox]:checked + label:before {
 .blog-social-list span {
     margin-right: 10px;
     font-weight: 600;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #161616;
 }
 
@@ -6756,9 +7521,11 @@ input[type=checkbox]:checked + label:before {
 .blog-tags span {
     margin-right: 10px;
     font-weight: 600;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #161616;
 }
+
+
 
 /** Details banner start **/
 .details-banner{
@@ -7345,7 +8112,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .heading-car-3 .pull-right h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     float: right;
 }
 
@@ -7504,7 +8271,7 @@ input[type=checkbox]:checked + label:before {
     font-size: 16px;
     font-weight: 600;
     color: #000000;;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin-bottom: 5px;
 }
 
@@ -7642,7 +8409,7 @@ table {
 
 .shop-table.cart .t-600{
     font-weight: 600;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .shop-table.cart .product-remove {
@@ -7675,6 +8442,7 @@ table {
     outline: none;
 }
 
+
 /** Tabbing box start **/
 .tabbing-box .tab-pane {
     padding-top: 30px;
@@ -7695,21 +8463,31 @@ table {
 .tabbing-box .nav-tabs li {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #0B4ED4;
+    color: #fff;
     border-radius: 0;
 }
 
 .tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
     border-radius: 0;
-    color: #0B4ED4;
+    color: #fff;
 }
 
 .tabbing-box .nav-tabs .nav-link {
     border: none;
+}
+
+/** Card Langkah **/
+.card-langkah {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
+    background-color: #ffffff;
+    padding: 20px;
 }
 
 /** Cardetailsslider 2 start **/
@@ -7850,27 +8628,106 @@ table {
     background: transparent;
     border-bottom: none;
     margin-bottom: 30px;
+    flex: auto;
 }
+
 
 .faq-info p{
     margin-bottom: 0;
 }
 
-.faq-info .nav-tabs .nav-link {
-    display: block;
-    padding: 12px 20px 12px;
-    border-radius: 0;
-    background: #fff;
-    color: #535353;
+.faq-info h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
 }
 
+.faq-info h6{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    padding: 10px;
+}
+
+.faq-info .nav-tabs .nav-link {
+    display: flex;
+    /* padding: 12px 20px 12px; */
+    border-radius: 100px;
+    background: #fcfcfc;
+    color: #535353;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
+    margin: 0 auto; /* Added */
+}
+
+
 .faq-info .nav-tabs .nav-link.active {
-    color: #0B4ED4;
+    color: #fff;
 }
 
 .faq-info .nav-tabs .nav-link:hover{
-    color: #0B4ED4;
+    color: #fff;
 }
+
+.card-body p{
+    font-size: 15px;
+}
+
+.card {
+    border: none;
+}
+
+.card-box {
+    border: solid 1px #dedede;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.card-box-cet {
+    border: solid 1px #dedede;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.card-box h1{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-box i {
+    padding: 10px;
+    color: #4f8fda;
+    float: right;
+}
+
+.card-box-cet h1{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-box-cet i {
+    padding: 10px;
+    color: #f0151f;
+    float: right;
+}
+
+.card-text{
+    margin-bottom: 0px;
+}
+
+.card-body h5{
+    font-size: 18px;
+}
+
+.card{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
+    float: none; 
+    margin-bottom: 10x;
+
+}
+
 
 .faq-info .accordion-button {
     position: relative;
@@ -7878,41 +8735,57 @@ table {
     align-items: center;
     width: 100%;
     font-weight: 500;
-    padding: 20px;
+    padding: 20px 0 15px;
     font-size: 16px;
-    color: #535353;
+    color: #161616;
     text-align: left;
-    background-color: #f7f7f7;
+    background-color: transparent;
     box-shadow: none;
     border: 0;
     border-radius: 0;
     overflow-anchor: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
     margin-bottom: 10px;
+    border-bottom: solid 1px #3a3a3a;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 
 .faq-info .accordion-button:focus {
     z-index: 3;
     outline: 0;
-    background-color: #f7f7f7;
+    background-color: transparent;
     box-shadow: none;
 }
 
 .faq-info .accordion-item{
     border: none;
+    background-color: transparent;
 }
 
 .faq-info .accordion-body {
-    padding: 20px 0 30px;
+    padding: 10px;
 }
 
 .faq-info .accordion-body p{
-    margin-bottom: 0;
+    margin-left: 10px;
+    padding: 20px;
+    background-color: transparent;
 }
 
-.faq-info .accordion-button:not(.collapsed)::after {
+.faq-info .accordion-button:not(.show)::after {
     background-image: url(../img/down.png);
-    transform: rotate(-180deg);
+    transform: -180deg;
+    
 }
 
 .faq-info.other-features .accordion-button {
@@ -7974,8 +8847,27 @@ table {
     color: #4d4d4d;
 }
 
+
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+  }
+  .bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+  }
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
 .pad-20 {
-    padding: 25px;
+    padding: 10px;
 }
 
 .pad-2 {
@@ -8837,6 +9729,15 @@ table {
         display: block;
     }
 
+    .dropdown-item:hover{
+        background-color: #4f8fda;
+    }
+
+    .dropdown-item p:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+
     .dropdown-submenu:hover > .dropdown-menu {
         display: block;
     }
@@ -8846,12 +9747,14 @@ table {
     }
 
     .sticky-header .navbar-expand-lg .navbar-nav .nav-link {
-        color: #0B4ED4;
+        color: #4f8fda;
     }
 
     .sticky-header .navbar-expand-lg .navbar-nav .nav-link:hover{
-        color: #0B4ED4!important;
+        color: #4f8fda!important;
     }
+
+    
 
     .sticky-header .open-offcanvas {
         color: #fff;
@@ -8859,17 +9762,48 @@ table {
     }
 
     .header-shrink .navbar-expand-lg .navbar-nav .nav-link {
-        color: #0B4ED4;
+        color: #0A043C;
     }
 
-    #main-header-2.header-shrink .navbar-expand-lg .navbar-nav .nav-link:hover {
-        color: #0B4ED4 !important;
+    #main-header-4.header-shrink .navbar-expand-lg .navbar-nav .nav-link:hover {
+        color: #0A043C !important;
     }
 
 
     .hide-carat .nav-link::after {
         display: none !important;
     }
+
+    /* .car-box .detail .top h1{
+        font-size: 16px;
+        font-weight: 620;
+        margin-bottom: 0px;
+    }
+
+    .car-box .detail .top h2{
+        float: left;
+        font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 700;
+        color: #f0151f;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .car-box .detail .top h3{
+        font-size: 13px;
+        font-weight: 600;
+        color: #777;
+        float: right;
+        margin-top: 11px;
+    }
+    
+    .car-box .detail .top h4{
+        font-size: 12px;
+        float: left;
+        font-weight: 500;
+        color: #161616;
+        margin-bottom: 0px;  
+    } */
 }
 
 /** Media **/
@@ -8902,6 +9836,7 @@ table {
 @media (max-width: 992px) {
     .content-area {
         padding: 80px 0 50px;
+        
     }
 
     .content-area-2 {
@@ -8918,6 +9853,7 @@ table {
 
     .content-area-5 {
         padding: 80px 0;
+        
     }
 
     .content-area-6 {
@@ -8991,6 +9927,8 @@ table {
     .main-title h2 {
         font-size: 31px;
     }
+
+    
 
     .testimonial-4{
         padding: 80px 0 87px;
@@ -9322,7 +10260,7 @@ table {
     }
 
     .banner .carousel-content.banner-info {
-        /*top: 27%;*/
+        top: 27%;
     }
 
     .banner-slider-inner .show-more-options {
@@ -9535,13 +10473,13 @@ table {
     }
 
     .banner .carousel-control-next, .carousel-control-prev {
-        width: 30px;
-        height: 50px;
+        width: 25px;
+        height: 25px;
     }
 
     .banner .carousel-control-next-icon, .carousel-control-prev-icon {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1rem;
+        height: 1rem;
     }
 
     .coming-soon h1 {
@@ -9549,11 +10487,46 @@ table {
     }
 
     .main-title-3 h1 {
-        font-size: 35px;
+        font-size: 30px;
+    }
+
+    .main-title-3 h4{
+        font-size: 12px;
     }
 
     .main-title-3 p {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    .car-box .detail .top h1{
+        font-size: 16px;
+        font-weight: 620;
+        margin-bottom: 0px;
+    }
+
+    .car-box .detail .top h2{
+        float: left;
+        font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 700;
+        color: #f0151f;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .car-box .detail .top h3{
+        font-size: 13px;
+        font-weight: 600;
+        color: #777;
+        float: right;
+        margin-top: 11px;
+    }
+    
+    .car-box .detail .top h4{
+        font-size: 12px;
+        float: left;
+        font-weight: 500;
+        color: #161616;
+        margin-bottom: 0px;  
     }
 }
 
@@ -9992,7 +10965,7 @@ table {
 
     .sub-footer .copy {
         text-align: center;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
     }
 
     .sub-footer .social-list {
@@ -10171,7 +11144,7 @@ table {
     }
 
     .content-area-3 {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
 
     .content-area-4 {
@@ -10242,6 +11215,7 @@ table {
         max-width: 100%;
     }
 
+    
     .car-amenities ul li {
         list-style: none;
         margin-bottom: 10px;
@@ -10272,11 +11246,100 @@ table {
     .helping-sentar {
         padding-top: 60px;
     }
+
+    .car-box .detail .top h1{
+        font-size: 16px;
+        font-weight: 620;
+        margin-bottom: 0px;
+    }
+
+    .car-box .detail .top h2{
+        float: left;
+        font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 700;
+        color: #f0151f;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .car-box .detail .top h3{
+        font-size: 14px;
+        font-weight: 600;
+        color: #777;
+        float: right;
+        margin-top: 11px;
+    }
+    
+    .car-box .detail .top h4{
+        font-size: 12px;
+        float: left;
+        font-weight: 500;
+        color: #161616;
+        margin-bottom: 0px;  
+    }
+
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .dropdown .dropdown-item:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item:hover{
+        background-color: #4f8fda;
+    }
+
+    .dropdown-item p:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
 }
 
 @media (max-width: 580px) {
+
+    .banner{
+        width: 100%;
+        height: 100%;
+    }
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .dropdown .dropdown-item:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item:hover{
+        background-color: #4f8fda;
+    }
+
+    .dropdown-item p:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
     .comment-content h6 span{
         display: none;
+    }
+
+    .home-page_entrance{
+        width:auto;
+    }
+
+    .tables-box{
+        width: auto;
     }
 
     .heading-car-3 .ratings-2{
@@ -10324,6 +11387,124 @@ table {
     .setting-button {
         display: none;
     }
+
+    .car-box .detail .top h1{
+        font-size: 16px;
+        font-weight: 620;
+        margin-bottom: 0px;
+    }
+
+    .car-box .detail .top h2{
+        float: left;
+        font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 700;
+        color: #f0151f;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    .car-box .detail .top h3{
+        font-size: 11px;
+        font-weight: 600;
+        color: #777;
+        float: left;
+        margin-top: 11px;
+    }
+    
+    .car-box .detail .top h4{
+        font-size: 12px;
+        float: left;
+        font-weight: 500;
+        color: #161616;
+        margin-bottom: 0px;  
+    }
+
+    .car-box .facilities-list li {
+        list-style: none;
+        float: left;
+        /* width: 33.33%; */
+        margin: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .sub-banner {
+        background: #0A043C;
+        background-size: cover;
+        height: 200px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        text-align: center;
+        font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .sub-banner .breadcrumb-area {
+        letter-spacing: 1px;
+        position: absolute;
+        top: 40%;
+        right: 0;
+        left: 0;
+    }
+
+    .sub-banner .breadcrumb-area h1 {
+        margin: 0 0 5px;
+        font-weight: 600;
+        color: #fff;
+        font-size: 20px;
+        text-transform: none;
+    }
+
+    .faq-info .nav-tabs {
+        background: transparent;
+        border-bottom: none;
+        margin-bottom: 30px;
+        flex: auto;
+    }
+    
+    .faq-info .nav-tabs .nav-link {
+        display: flex;
+        /* padding: 12px 20px 12px; */
+        border-radius: 100px;
+        background: #dedede;
+        color: #535353;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
+        margin: 0 auto; /* Added */
+    
+    }
+
+    .car-detail .car-price h1{
+        float: left;
+        font-family: "Poppins-Medium, -apple-system, BlinkMacSystemFont", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 700;
+        color: #f0151f;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .car-detail .car-price h2{
+        font-size: 12px;
+        font-weight: 600;
+        color: #777;
+        margin-top: 12px;
+    }
+
+    .faq-info h5{
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        margin-top: 10px;
+    }
+    
+    .faq-info h6{
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        padding: 10px;
+    }
+
+    
 }
 
 

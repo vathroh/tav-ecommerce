@@ -8,56 +8,50 @@
       </div>
 
       <div class="sell-car-form">
-        <div class="sell-car-form-header">
-          Silahkan masukkan data di bawah ini untuk kami hubungi
-        </div>
-        <form>
-          <div class="sell-car-form-container">
-            <div class="sell-car-form-group">
-              <label for="merk">Merk Mobil</label>
-              <select name="merk" id="merk">
-                <option selected>Pilih Merk Mobil</option>
-                <option :value="merks.id" v-for="merks in merk">{{ merks.name }}</option>
-              </select>
-            </div>
-            <div class="sell-car-form-group">
-              <label for="model">Model Mobil</label>
-              <select name="model" id="model">
-                <option selected>Pilih Model Mobil</option>
-                <option :value="models.id" v-for="models in model">{{ models.nama_kategori }}</option>
-              </select>
-            </div>
-            <div class="sell-car-form-group">
-              <label for="Tahun">Tahun Mobil</label>
-              <input id="tahun" type="text" placeholder="Tahun" />
-            </div>
-            <div class="sell-car-form-group">
-              <label for="model">Tipe Mobil</label>
-              <select name="model" id="model">
-                <option selected>Pilih Tipe Mobil</option>
-              </select>
-            </div>
-            <div class="sell-car-form-group">
-              <label for="transmisi">Tranmisi</label>
-              <select name="model" id="transmisi">
-                <option selected>Pilih Transmisi</option>
-              </select>
-            </div>
-            <div class="sell-car-form-group">
-              <label for="jarak-tempuh">Jarak Tempuh</label>
-              <select name="model" id="jarak-tempuh">
-                <option selected>Pilih Jarak Tempuh</option>
-              </select>
-            </div>
-            <div class="sell-car-form-group">
-              <label for="whatsapp">No. Handphone/WhatsApp</label>
-              <input id="whatsapp" type="text" placeholder="No. Handphone/WhatsApp" />
-            </div>
+        <div>
+          <div class="sell-car-form-header">
+            Masukan Data Mobil Anda, Inspeksi & Cek Harga Gratis!
           </div>
-          <button type="submit" class="sell-car-form-button">
-            Mulai
-          </button>
-        </form>
+          <form>
+            <div class="sell-car-form-container">
+              <div class="sell-car-form-group">
+                <label for="merk">Merek Mobil</label>
+                <select name="merk" id="merk" v-model="data.merk" @change="getDataMerk(data.merk.id)">
+                  <option selected>Pilih Merek Mobil</option>
+                  <option :value="merks.id" v-for="merks in merk">{{ merks.name }}</option>
+                </select>
+              </div>
+              <div class="sell-car-form-group">
+                <label for="model">Model Mobil</label>
+                <select name="model" id="model" v-model="data.model">
+                  <option selected>Pilih Model Mobil</option>
+                  <option :value="models.id" v-for="models in model">{{ models.name }}</option>
+                </select>
+              </div>
+              <div class="sell-car-form-group">
+                <label for="Tahun">Tahun Mobil</label>
+                <select name="tahun" id="tahun" v-model="data.year">
+                  <option selected>Pilih Tahun</option>
+                  <option value="2010">2010</option>
+                  <option value="2014">2014</option>
+                  <option value="2016">2016</option>
+                  <option value="2019">2019</option>
+                  <option value="2021">2021</option>
+                  <option value="2021">2022</option>
+                </select>
+              </div>
+              <div class="sell-car-form-group">
+                <label for="whatsapp">No. Handphone/WhatsApp</label>
+                <input id="whatsapp" type="text" placeholder="No. Handphone/WhatsApp" v-model="data.mobile_phone" />
+              </div>
+            </div>
+            <button type="submit" class="sell-car-form-button" @click.prevent="saveSubmissionData">
+              MULAI JUAL DI SINI
+            </button>
+            <p> Dengan melanjutkan, Saya setuju dengan <a href="#">Kebijakan Privasi</a> & <a href="#">Ketentuan
+                Penggunaan </a></p>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -74,7 +68,7 @@
             <div class="easier-card-content-images">
               <img src="/images/illustration/Coding _Outline.svg" alt="input-data" />
             </div>
-            <h2 class="easier-card-content-text">Input data mobil anda</h2>
+            <h2 class="easier-card-content-text">Input data mobil Anda</h2>
           </div>
         </div>
 
@@ -86,7 +80,7 @@
             <div class="easier-card-content-images">
               <img src="/images/illustration/Mobile Phone_Outline.svg" alt="tav-menghubungi-anda" />
             </div>
-            <h2 class="easier-card-content-text">TAV menghubungi anda</h2>
+            <h2 class="easier-card-content-text">TAV menghubungi Anda</h2>
           </div>
         </div>
 
@@ -98,7 +92,7 @@
             <div class="easier-card-content-images">
               <img src="/images/illustration/Car_Two Color.svg" alt="inspeksi-mobil-anda" />
             </div>
-            <h2 class="easier-card-content-text">Inspeksi mobil anda</h2>
+            <h2 class="easier-card-content-text">Inspeksi mobil Anda</h2>
           </div>
         </div>
 
@@ -118,9 +112,10 @@
       </div>
     </div>
     <div class="sell-car-section-why">
-      <div class="sell-car-section-heading">
-        <h2 class="sell-car-section-heading-h2">Kenapa Jual Mobil di TAV?</h2>
-      </div>
+      <h3 class="sell-car-section-heading">
+        Kenapa Jual Mobil di TAV?
+        <h2 class="sell-car-section-heading-h2"></h2>
+      </h3>
 
       <div class="sell-car-section-why-sell-content">
         <div class="grid-why-sell">
@@ -130,21 +125,7 @@
           <div class="why-sell-content-text">
             <h2 class="why-sell-content-text-heading">Aman dan Terpercaya</h2>
             <p class="why-sell-content-text-p">
-              Inspektor profesional kami melakukan pemeriksaan mobil secara
-              menyeluruh untuk mengetahui harga yang sesuai dengan kondisi
-              mobil Anda.
-            </p>
-          </div>
-        </div>
-        <div class="grid-why-sell">
-          <div class="why-sell-content-icon">
-            <img src="images/illustration/Handshake_Two Color.svg" width="140px" alt="" />
-          </div>
-          <div class="why-sell-content-text">
-            <h2 class="why-sell-content-text-heading">Penawaran Terbaik</h2>
-            <p class="why-sell-content-text-p">
-              Kami memberikan harga yang sesuai dan kami pastikan memberikan
-              penawaran terbaik untuk Anda.
+              Inspektur Kami akan melaksanakan pengecekan terhadap kondisi mobil Anda dengan baik
             </p>
           </div>
         </div>
@@ -155,8 +136,18 @@
           <div class="why-sell-content-text">
             <h2 class="why-sell-content-text-heading">Proses Mudah</h2>
             <p class="why-sell-content-text-p">
-              Dapatkan pengalaman yang mudah & nyaman mulai dari proses
-              inspeksi mobil hingga proses kepengurusan semua dokumen Anda.
+              Proses Inspeksi yang mudah dan nyaman, Kami juga akan membantu hingga proses kepengurusan dokumen Anda
+            </p>
+          </div>
+        </div>
+        <div class="grid-why-sell">
+          <div class="why-sell-content-icon">
+            <img src="images/illustration/Handshake_Two Color.svg" width="140px" alt="" />
+          </div>
+          <div class="why-sell-content-text">
+            <h2 class="why-sell-content-text-heading">Penawaran Terbaik</h2>
+            <p class="why-sell-content-text-p">
+              Kami memberikan harga yang terbaik untuk pembelian mobil Anda
             </p>
           </div>
         </div>
@@ -165,10 +156,10 @@
             <img src="images/illustration/Rocket Boy_Flatline.svg" width="140px" alt="trustworthy" />
           </div>
           <div class="why-sell-content-text">
-            <h2 class="why-sell-content-text-heading">Pembayaran Cepat</h2>
+            <h2 class="why-sell-content-text-heading">Pembayaran Instan</h2>
             <p class="why-sell-content-text-p">
-              Kami tidak main-main. Setelah kesepakatan dibuat, kami membayar
-              mobil Anda secepatnya.
+              Setelah proses inspeksi selesai dan telah ada kesepakatan harga, maka pada saat itu juga Kami akan
+              membayar mobil Anda
             </p>
           </div>
         </div>
@@ -191,11 +182,19 @@
 
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
       merk: [],
-      model: []
+      model: [],
+      data: {
+        merk: '',
+        model: "",
+        year: "",
+        mobile_phone: ''
+      },
     }
   },
 
@@ -204,22 +203,41 @@ export default {
       .then(response => response.json())
       .then(data => {
         this.merk = data
-        console.log(this.merk)
-      }),
+        // console.log(this.merk)
+      })       
+  },
 
-      fetch('/api/model')
-        .then(response => response.json())
-        .then(data => {
-          this.model = data
-          console.log(this.model)
+  methods: {
+    getDataMerk() {
+      axios.get(`api/model-by-brand/` + this.data.merk)
+      .then(response => {
+        this.model = response.data
+        console.log(response.data)
         })
+    },
+    saveSubmissionData() {
+      axios.post(`/api/car-selling-submission`, {
+        merk_id: this.data.merk,
+        model_id: this.data.model,
+        year: this.data.year,
+        mobile_phone: this.data.mobile_phone
+      })
+        .then(response => {
+          this.$router.push('adft') 
+          console.log(response)
+        })
+        .catch(e => {
+          console.log(e)
+          
+        })
+    }
   }
 }
 </script>
 
 <style scoped>
 section {
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .sell.car-header {
@@ -230,7 +248,7 @@ section {
   width: 100%;
   height: 300px;
   position: relative;
-  background-color: #1e3a8a;
+  background-color: #4F8FDA;
 }
 
 .sell-car-header-hero-image {
@@ -330,6 +348,22 @@ section {
   border: none
 }
 
+form p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: 20px;
+}
+
+form p a,
+form p a:hover {
+  color: #252525;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
 .sell-car-form-button:hover {
   background-color: #fbbc05;
 }
@@ -339,13 +373,12 @@ section {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  color: #252525
-;
+  color: #252525;
 }
 
 .easier-box {
-  background-color: #f0f0f0;
-  padding: 40px;
+  background-color: #E2E8F0;
+  padding: 40px 40px 80px 40px;
 }
 
 .easier-card {
@@ -429,7 +462,7 @@ section {
 }
 
 .why-sell-content-text-heading {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
 }
 
@@ -444,7 +477,7 @@ section {
 .sell-car-question-box {
   margin-top: 64px;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: #E2E8F0;
   padding: 16px;
 }
 
@@ -542,6 +575,7 @@ section {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    min-height: calc(100vh - 94px);
   }
 
   .sell-car-header-hero-content {
@@ -569,11 +603,10 @@ section {
   }
 
   .sell-car-form {
-    top: 4px;
-    right: 8px;
+    /* top: 4px;
+    right: 8px; */
     background-color: white;
     border-radius: 4px;
-    /* width: 38%; */
     max-width: 500px;
     padding: 40px;
     margin: 40px 150px;
@@ -597,9 +630,7 @@ section {
     font-size: 32px;
   }
 
-  .why-sell-content-text-heading {
-    font-size: 20px;
-  }
+
 
   .easier-content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -654,7 +685,7 @@ section {
   }
 
   .why-sell-content-text-p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .sell-car-question-h1 {

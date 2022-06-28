@@ -141,12 +141,17 @@ class MobilController extends Controller
         return response()->json($data);
     }
 
+
+
     public function getDataModel()
     {
-        $data = DB::table('car_kategoris')->get();
+        $data = DB::table('car_merks')->get();
         return response()->json($data);
     }
     
-
+    public function getModelByBrand($brandId){
+        $data = DB::table('car_merks')->where('car_brand_id', $brandId)->get();
+        return response()->json($data);
+    }
     
 }

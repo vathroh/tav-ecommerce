@@ -18,6 +18,7 @@ const Daftar = require('../components/DaftarComponent.vue').default;
 const Sertif = require('../components/SertifComponent.vue').default;
 const Murah = require('../components/MurahComponent.vue').default;
 const Merk = require('../components/MerkComponent.vue').default;
+const CarSellNotif = require('../pages/adft.vue').default;
 //const About = require('../pages/About.vue').default;
 //import User from '../pages/User.vue';
 
@@ -29,6 +30,7 @@ const routes = [
     { name: 'Tentang', path:'/Tentang', component: Tentang},
     { name: 'Faq', path:'/Faq', component: Faq},
     { name: 'Hubungi', path: '/Hubungi', component: Hubungi},
+    { name: 'CarSellNotif', path: '/adft', component: CarSellNotif},
     { name: 'Beli', path: '/Beli', component: BeliMobil},
     { name: 'Km-terendah', path: '/Km-terendah', component: KmRendah},
     { name: 'Sertif', path: '/Tav-certified', component: Sertif},

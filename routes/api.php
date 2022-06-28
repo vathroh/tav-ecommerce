@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarSellingSubmissionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MobilController;
@@ -28,6 +29,9 @@ Route::post('/carimobil', [MobilController::class, 'cariMobil']);
 Route::get('/brand', [MobilController::class, 'getDataBrand']);
 Route::get('/merk/{id}', [MobilController::class, 'getMerk']);
 Route::get('/model', [MobilController::class, 'getDataModel']);
+Route::get('/model-by-brand/{brand}', [MobilController::class, 'getModelByBrand']);
 
 Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('/datauser', [GoogleController::class, 'handleGoogleCallback']);
+
+Route::post('/car-selling-submission', [CarSellingSubmissionController::class, 'store']);

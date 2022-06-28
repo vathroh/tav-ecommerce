@@ -1,15 +1,16 @@
 <template>
 <div>
     <div class="w-100 herowave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
             <path fill="rgb(226 232 240)" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,101.3C384,96,480,128,576,122.7C672,117,768,75,864,74.7C960,75,1056,117,1152,122.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
+        </svg> -->
     </div>
     <div class="faq content-area bg-grea">
         <div class="container">
             <!-- Main title -->
             <div class="main-title text-center">
                 <h1 class="mb-10">FAQ</h1>
+                <p>Pertanyaan yang sering diajukan</p>
                
             </div>
             <!-- <div class="row">
@@ -63,6 +64,7 @@
                         <!-- <VueFaqAccordion :items="faqs">
 
                         </VueFaqAccordion>                   -->
+                        
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item" v-for="faq in faqs">
                                 <!-- <h2 class="accordion-header" id="flush-headingOne"> -->

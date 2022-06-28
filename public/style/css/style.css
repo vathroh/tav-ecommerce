@@ -1344,7 +1344,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .bg-grea-2{
-    background: #51769E;
+    background: #E2E8F0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-top-right-radius: 90px;
     border-top-left-radius: 90px;
@@ -1944,14 +1944,15 @@ form input+button{
 .main-title-4 {
     margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .main-title-4 h1 {
     font-size: 30px;
     font-weight: 700;
-    margin-bottom: 30px;
+    line-height: 30px;
     text-transform: capitalize;
-    color: #ffffff;
+    color: #252525;
 }
 
 .main-title-4 h2 {
@@ -2025,7 +2026,7 @@ form input+button{
 
 .main-title-2 h5 {
     text-transform: capitalize;
-    color: #ffffff;
+    color: #252525;
     position: relative;
     text-align: left;
     font-size: 18px;
@@ -8624,6 +8625,11 @@ table {
 }
 
 /** Faq info start **/
+
+.faq {
+    border-radius: 100px 100px 0 0;
+}
+
 .faq-info .nav-tabs {
     background: transparent;
     border-bottom: none;
@@ -9693,6 +9699,12 @@ table {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* .featured-car {
+    margin-top: 30px;
+    background: #E2E8F0;
+    border-radius: 100px 100px 0 0;
+} */
+
 .featured-car .col-pad{
     padding: 0 12.5px;
 }
@@ -9704,6 +9716,7 @@ table {
 .btn-info{
     color: #fff;
 }
+
 
 @media all and (min-width: 1200px) {
     .car-box-2 .footer {

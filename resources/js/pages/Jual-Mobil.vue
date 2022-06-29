@@ -190,9 +190,9 @@ export default {
       merk: [],
       model: [],
       data: {
-        merk: '',
-        model: "",
-        year: "",
+        merk: 'Pilih Merek Mobil',
+        model: "Pilih Model Mobil",
+        year: "Pilih Tahun",
         mobile_phone: ''
       },
     }
